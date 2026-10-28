@@ -1,0 +1,20 @@
+{
+  "name": "naukri-profile-update",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Playwright script that logs into Naukri.com and refreshes the Key skills section of your profile",
+  "scripts": {
+    "login": "node src/login.js",
+    "update": "node src/update-profile.js",
+    "schedule": "node src/scheduler.js",
+    "test": "node test/run-tests.js && node test/scheduler-tests.js",
+    "test:live": "node src/test-all.js",
+    "test:live:logged-in": "node src/test-all.js logged-in",
+    "test:live:login": "node src/test-all.js login"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "playwright": "1.56.0"
+  }
+}
